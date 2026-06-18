@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #f3f4f6;
+  
+  --color-primary: #ff4d00;
+  --color-secondary: #ff0055;
+  --color-accent: #f59e0b;
+  
+  --color-surface-dark: #050505;
+  --color-surface-card: #0a0a0c;
+  --color-surface-card-hover: #121215;
+  
+  --color-border-subtle: rgba(255, 255, 255, 0.07);
+  --color-border-glow: rgba(255, 77, 0, 0.2);
+  
+  --font-sans: 'Inter', 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  
+  --animate-pulse-glow: pulse-glow 3s infinite ease-in-out;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(1.05);
+  }
+}
+
+:root {
+  --background: #000000;
+  --foreground: #f3f4f6;
+  color-scheme: dark;
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1f1f23;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2f2f35;
+}
+
+/* Custom Glassmorphism Classes */
+.glass-panel {
+  background: rgba(10, 10, 12, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-panel-hover {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(18, 18, 21, 0.85);
+  border-color: rgba(255, 77, 0, 0.25);
+  box-shadow: 0 10px 30px -15px rgba(255, 77, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+/* Premium Text Gradient */
+.text-gradient {
+  background: linear-gradient(135deg, #ff8c00 0%, #ff4d00 50%, #ff0055 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gradient-orange-red {
+  background: linear-gradient(135deg, #ff4d00 0%, #ff0055 100%);
+}
+
+.glow-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.15;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.glow-orange {
+  background: radial-gradient(circle, #ff4d00 0%, transparent 70%);
+}
+
+.glow-red {
+  background: radial-gradient(circle, #ff0055 0%, transparent 70%);
+}
+
+/* Bento Grid item transition */
+.bento-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
